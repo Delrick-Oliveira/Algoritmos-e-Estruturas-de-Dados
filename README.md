@@ -2,7 +2,7 @@
 Algoritmos e estruturas de dados importantes todos implementados na linguagem C++.
 
 <p align="center">
-  <img width="460" height="300" src="/images/cppLogo.png">
+  <img width="300" height="300" src="/images/cppLogo.png">
 </p>
 
 
