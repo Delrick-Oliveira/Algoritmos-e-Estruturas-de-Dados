@@ -3,6 +3,8 @@ Algoritmos e estruturas de dados importantes todos implementados na linguagem C+
 
 ![C++ Logo](/images/cppLogo.png)
 
-Nota: para linkar **arquivos externos** em um mesmo executável (externo.h , externo.cpp) utilizar o comando:
+Nota: para linkar **arquivos externos** (externo.h , externo.cpp) que são referenciados pelo arquivo principal em um mesmo executáve, utilizar o comando:
 
-**g++ -o (nome do executável) main.cpp (arquivo1.h) (arquivo1.cpp) ... (e assim sucessivamente)**
+`g++ -o executavel main.cpp (arquivo1.h) (arquivo1.cpp)`
+
+Utilizar no lugar do nome dos arquivos de exemplo os nomes dos **seus respectivos arquivos** (executável, arquivo principal e arquivos externos).
