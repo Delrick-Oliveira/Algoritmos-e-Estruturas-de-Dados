@@ -6,7 +6,7 @@ Algoritmos e estruturas de dados importantes todos implementados na linguagem C+
 </p>
 
 
-Nota: para linkar **arquivos externos** (externo.h , externo.cpp) que são referenciados pelo arquivo principal em um mesmo executáve, utilizar o comando:
+Nota: para linkar **arquivos externos** (externo.h , externo.cpp) que são referenciados pelo arquivo principal em um mesmo executável, utilizar o comando:
 
 `g++ -o executavel main.cpp (arquivo1.h) (arquivo1.cpp)`
 
