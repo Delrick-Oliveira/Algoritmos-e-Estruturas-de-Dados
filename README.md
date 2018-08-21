@@ -1,7 +1,10 @@
 # Algoritmos-e-Estruturas-de-Dados
 Algoritmos e estruturas de dados importantes todos implementados na linguagem C++.
 
-![C++ Logo](/images/cppLogo.png)
+<p align="center">
+  <img width="460" height="300" src="/images/cppLogo.png">
+</p>
+
 
 Nota: para linkar **arquivos externos** (externo.h , externo.cpp) que são referenciados pelo arquivo principal em um mesmo executáve, utilizar o comando:
 
