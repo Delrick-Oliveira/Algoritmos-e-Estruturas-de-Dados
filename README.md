@@ -1,4 +1,4 @@
-# Algoritmos-e-Estruturas-de-Dados [english](##english)
+# Algoritmos-e-Estruturas-de-Dados [english](#english)
 Algoritmos e estruturas de dados importantes todos implementados na linguagem C++.
 
 <p align="center">
