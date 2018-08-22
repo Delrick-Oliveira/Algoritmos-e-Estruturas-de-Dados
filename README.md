@@ -1,4 +1,5 @@
-# Algoritmos-e-Estruturas-de-Dados [english](#english)
+# Algoritmos-e-Estruturas-de-Dados ![build status: in progress](https://img.shields.io/badge/build_status-in%20progress-yellow.svg?longCache=true&style=plastic)
+
 Algoritmos e estruturas de dados importantes todos implementados na linguagem C++.
 
 <p align="center">
@@ -13,6 +14,5 @@ Nota: para linkar **arquivos externos** (externo.h , externo.cpp) que são refer
 Utilizar no lugar do nome dos arquivos de exemplo os nomes dos **seus respectivos arquivos** (executável, arquivo principal e arquivos externos).
 
 
-## English
 
 
