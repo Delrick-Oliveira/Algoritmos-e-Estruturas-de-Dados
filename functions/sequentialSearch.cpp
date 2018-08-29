@@ -1,8 +1,8 @@
 #include "sequentialSearch.h"
-#include<vector>
+#include <vector>
 
 template<class Type1, class Type2>
-sequentialSearch(Type1 key, vector<Type2> list, int tam)
+int sequentialSearch(Type1 key, vector<Type2> list, int tam)
 {
     int i;
     for(i=0; i<tam;i++)

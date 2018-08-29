@@ -1,45 +1,60 @@
 #include <iostream>
 #include <vector>
 #include <fstream>
-#include <iostream>
-/*#include "functions/sequentialSearch.h"*/
+
+#include "functions/sequentialSearch.h"
+
+
+template<class Type1, class Type2>
+int sequentialSearch(Type1 key, vector<Type2> list, int tam)
+{
+    int i;
+    for(i=0; i<tam;i++)
+    {
+        if(key==list[i].key)
+        {
+            return i;
+        }
+    }
+    return null;
+}
 
 using namespace std;
 
 int main(int argc, const char * argv[])
 {
-    string line;
+    int number;
     fstream myfile("input.txt");
-    // vector<int> lista1;
-    //int i, x;
+    vector<int> lista1;
+    int key, pos;
+    key = 7;
+    
+    
      if (myfile.is_open())
-  {
-    while (myfile >> line)
     {
-        cout << line << '\n';
-    }
-    myfile.close();
+        while (myfile >> number)
+        {
+            lista1.push_back(number);
+        }
+        myfile.close();
   }
 
   else cout << "Unable to open file"; 
-    
-   /* for(i=0;i<10;i++)
-    {
-        cin >> x;
-        lista1.push_back(x);
-    }
+ 
     
     cout << endl;
-    cout << "conteúdo do vector v1 : \n"; 
+    cout << "conteúdo do vector:" <<endl; 
     
     for (vector<int>::iterator it = lista1.begin(); it != lista1.end() ; it++) 
     {
         cout << *it <<" "; // valor na posição apontada por it
     }
-    cout << endl;*/
+    cout << endl;
+    
+    pos = sequentialSearch(key,lista1, lista1.size());
+    
+    cout << "a posição da chave é: " << pos << endl;
 
-        /*Person anil;
-        anil.whatYouGot();*/
     return 0;
 }
 
