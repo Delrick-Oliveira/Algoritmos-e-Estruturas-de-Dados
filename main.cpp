@@ -14,7 +14,7 @@ int main(int argc, const char * argv[])
     //int i, x;
      if (myfile.is_open())
   {
-    while ( istream::get(myfile,line) )
+    while (myfile >> line)
     {
         cout << line << '\n';
     }
