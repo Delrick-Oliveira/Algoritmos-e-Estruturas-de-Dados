@@ -21,4 +21,18 @@ extern int sequentialSearch(T key, vector<T> list, int tam)
     return NIL;
 }
 
+template<typename T>
+extern int binarySearch(T key, vector<T> list, int tam)
+{
+    int i=0, j=tam-1, m=0;
+    while(i<=j)
+    {
+        m = (i+j)/2;
+        if(key == list[m]) return m;
+        else if(key<list[m]) j=m-1;
+        else i=m+1;
+    }
+    return NIL;
+}
+
 #endif

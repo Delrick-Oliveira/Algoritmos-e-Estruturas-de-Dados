@@ -3,7 +3,7 @@
 #include <fstream>
 
 // #define NIL -1;
-#include "functions/sequentialSearch.h"
+#include "functions/search.h"
 
 using namespace std;
 
@@ -28,8 +28,7 @@ int main(int argc, const char * argv[])
     int number;
     fstream myfile("input.txt");
     vector<int> lista1;
-    int key, pos;
-    key = 7;
+    int key = 7, pos = 0;
     
     
      if (myfile.is_open())
@@ -53,7 +52,7 @@ int main(int argc, const char * argv[])
     }
     cout << endl;
     
-    pos = sequentialSearch(key,lista1, lista1.size());
+    pos = binarySearch(key,lista1, lista1.size());
     
     cout << "a posição da chave é: " << pos << endl;
 
