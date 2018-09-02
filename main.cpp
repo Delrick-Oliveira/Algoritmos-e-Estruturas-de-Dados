@@ -2,26 +2,9 @@
 #include <vector>
 #include <fstream>
 
-// #define NIL -1;
 #include "functions/search.h"
 
 using namespace std;
-
-/*template<class Type1, class Type2>
-int sequentialSearch(Type1 key, vector<Type2> list, int tam)
-{
-    int i;
-    for(i=0; i<tam;i++)
-    {
-        if(key==list[i])
-        {
-            return i;
-        }
-    }
-    return NIL;
-}*/
-
-
 
 int main(int argc, const char * argv[])
 {
