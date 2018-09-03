@@ -13,7 +13,7 @@ int main(int argc, const char * argv[])
     No<int> no(4);
     Item<string> item, item2;
     item.setAtrib("Delrick"); 
-    No<Item> no2(item);
+    No<Item<string>> no2(item);
     item2 = no2.getItem();
     item2.show();
 }
