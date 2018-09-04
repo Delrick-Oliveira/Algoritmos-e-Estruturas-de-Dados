@@ -53,4 +53,7 @@ void Node<T>::setNext(Node<T>* node)
     this->next = node;
 }
 
+
+
+
 #endif
