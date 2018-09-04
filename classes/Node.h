@@ -5,8 +5,8 @@ template<class T>
 class Node
 {
     private:
-    T item;
-    Node* next;
+        T item;
+        Node* next;
     public:
         Node();
         Node(T item);

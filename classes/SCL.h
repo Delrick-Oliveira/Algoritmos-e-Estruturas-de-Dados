@@ -12,8 +12,8 @@ template<class T>
 class SCL
 {
     private:
-    Node<T> *first, *last;
-    int size;
+        Node<T> *first, *last;
+        int size;
     public:
         SCL();
         void insert(T item);
@@ -81,7 +81,7 @@ void SCL<T>::remove(Node<T>* node)
         size--;
     }   
 }
-//funcionando
+//working
 template<class T>
 void SCL<T>::remove(T item)
 {
