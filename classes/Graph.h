@@ -5,45 +5,64 @@
 
 typedef int Vertex;
 
-template<class EdgeK, VertexK>
+template<class EdgeKey>
 class Graph
 {
     private:
         int order, size;
-        list<Edge<EdgeT,VertexT>* adj;
+        list<Edge<EdgeKey,Vertex>>* adj;
         void destroy();
     public:
         Graph(int);
         void initialize(int order);
-        void insertEdge(Edge, Edge);
+        void insertEdge(Vertex v1, Vertex v2);
+        void insertEdge(Vertex v1, Vertex v2, int weight);
         void print();
 };
 
-template<class Edge>
-void Graph<Edge>::Graph(int order)
+template<class EdgeKey>
+Graph<EdgeKey>::Graph(int order)
 {
     initialize(order);
 }
 
-template<class Edge>
-void Graph<Edge>::initialize(int order)
+template<class EdgeKey>
+void Graph<EdgeKey>::initialize(int order)
 {
     if(this->order!=0) destroy();
     this->order = order;
-    adj = new list<Edge>[order+1];
+    adj = new list<Edge<EdgeKey, Vertex>>[order+1];
     size = 0;
 }
 
-template<class Edge>
-void Graph<Edge>::insertEdge(Vertex v1, Vertex v2)
+template<class EdgeKey>
+void Graph<EdgeKey>::insertEdge(Vertex v1, Vertex v2)
 {
-    adj[v1].insert(v2);
+    Edge e;
+    e.setTarget(v2);
+    adj[v1].push_back(e);
+    e.setTarget(v1);
+    adj[v2].push_back(e);
+    size++;
 }
 
-template<class Edge>
-void Graph<Edge>::Graph(int order)
+template<class EdgeKey>
+void Graph<EdgeKey>::insertEdge(Vertex v1, Vertex v2, int weight)
 {
-    initialize(order);
+    Edge e;
+    e.setTarget(v2);
+    e.setWeight(weight);
+    adj[v1].push_back(e);
+    e.setTarget(v1);
+    adj[v2].push_back(e);
+    size++;
+}
+
+
+template<class EdgeKey>
+void Graph<EdgeKey>::print()
+{
+       
 }
 
 #endif

@@ -27,6 +27,7 @@ class SCL
         Node<T>* getNode(int index);
 };
 
+//working
 template<class T>
 SCL<T>::SCL()
 {
@@ -36,6 +37,7 @@ SCL<T>::SCL()
     size = 0;
 }
 
+//working
 template<class T>
 void SCL<T>::insert(T item)
 {
@@ -46,13 +48,14 @@ void SCL<T>::insert(T item)
     size++;
 }
 
-
+//working
 template<class T>
 bool SCL<T>::isEmpty()
 {
     return first == last;
 }
 
+//working
 template<class T>
 Node<T>* SCL<T>::predecessor(Node<T>* node)
 {
@@ -64,6 +67,7 @@ Node<T>* SCL<T>::predecessor(Node<T>* node)
     return p;
 }
 
+//working
 template<class T>
 void SCL<T>::remove(Node<T>* node)
 {
