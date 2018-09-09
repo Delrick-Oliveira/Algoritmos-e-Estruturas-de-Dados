@@ -1,70 +1,85 @@
 #ifndef GRAPH_H
 #define GRAPH_H
 #include<iostream>
+#include<iomanip>
 #include "Edge.h"
 
 typedef int Vertex;
+typedef int Weight;
 
-template<class EdgeKey>
+using namespace std;
+
 class Graph
 {
     private:
         int order, size;
-        list<Edge<EdgeKey,Vertex>>* adj;
+        Weight **adj;
         void destroy();
     public:
-        Graph(int);
+        Graph(int order);
         void initialize(int order);
-        void insertEdge(Vertex v1, Vertex v2);
-        void insertEdge(Vertex v1, Vertex v2, int weight);
-        void print();
+        //void insertEdge(Vertex v1, Vertex v2);
+        void insertEdge(Vertex v1, Vertex v2, Weight weight);
+        void print();    
 };
 
-template<class EdgeKey>
-Graph<EdgeKey>::Graph(int order)
+Graph::Graph(int order)
 {
+    this->order = 0;
+    this->size = 0;
     initialize(order);
 }
 
-template<class EdgeKey>
-void Graph<EdgeKey>::initialize(int order)
+void Graph::initialize(int order)
 {
-    if(this->order!=0) destroy();
+    if(this->order != 0) destroy();
     this->order = order;
-    adj = new list<Edge<EdgeKey, Vertex>>[order+1];
-    size = 0;
-}
-
-template<class EdgeKey>
-void Graph<EdgeKey>::insertEdge(Vertex v1, Vertex v2)
-{
-    Edge e;
-    e.setTarget(v2);
-    adj[v1].push_back(e);
-    e.setTarget(v1);
-    adj[v2].push_back(e);
-    size++;
-}
-
-template<class EdgeKey>
-void Graph<EdgeKey>::insertEdge(Vertex v1, Vertex v2, int weight)
-{
-    Edge e;
-    e.setTarget(v2);
-    e.setWeight(weight);
-    adj[v1].push_back(e);
-    e.setTarget(v1);
-    adj[v2].push_back(e);
-    size++;
-}
-
-
-template<class EdgeKey>
-void Graph<EdgeKey>::print()
-{
-    for(i=1;i<=this->size;i++)
+    adj = new Weight *[order+1];
+    for(int i = 0; i<=this->order; i++)
     {
-        cout << 
+        adj[i] = new int[order+1];
+    }
+    for(int i = 0; i<= this->order; i++)
+    {
+        for(int j = 0; j <= this->order; j++)
+        {
+            adj[i][j] = 0;
+        }
+    }
+}
+
+void Graph::insertEdge(Vertex v1, Vertex v2, Weight weight)
+{
+    adj[v1][v2]=weight;
+    adj[v2][v1]=weight;
+    size++;
+}
+
+void Graph::destroy()
+{
+    for (int i = 0; i <= this->order; i++)delete[] adj[i];
+	delete[] adj;
+	adj = 0;
+}
+
+   
+void Graph::print()
+{
+    int k = 3;
+    cout << "  ";
+    for(int j = 1; j<= this->order;j++) cout << setw(k) << j;
+    cout << endl;
+    for(int j = 1; j<= this->order*k+3;j++) cout << "-";
+    cout << endl;
+    for(int i=1; i<= this->order;i++)
+    {
+        cout << setw(1) << i;
+        cout << "|";
+        for(int j = 1; j<= this-> order; j++)
+        {
+            cout << setw(k) << adj[i][j];
+        }
+        cout << endl;
     }
 }
 
