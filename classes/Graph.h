@@ -18,7 +18,6 @@ class Graph
     public:
         Graph(int order);
         void initialize(int order);
-        //void insertEdge(Vertex v1, Vertex v2);
         void insertEdge(Vertex v1, Vertex v2, Weight weight);
         void print();    
 };
