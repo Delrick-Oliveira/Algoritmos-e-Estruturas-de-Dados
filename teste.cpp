@@ -19,9 +19,8 @@ int main(int argc, const char * argv[])
     graph.insertEdge(2,4,25);
     graph.insertEdge(3,4,30);
     
-    path = TSPGreed(graph, 1);
+    path = TSPGreed(graph, 4);
     path.print();
-    
    return 0; 
 }
 
