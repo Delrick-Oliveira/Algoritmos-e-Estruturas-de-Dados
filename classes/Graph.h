@@ -21,7 +21,7 @@ class Graph
         void insertEdge(Vertex v1, Vertex v2, Weight weight);
         void print();
         Weight** getAdj();
-        int getsize();        
+        int getOrder();        
 };
 
 Graph::Graph(int order)
@@ -38,7 +38,7 @@ void Graph::initialize(int order)
     adj = new Weight *[order+1];
     for(int i = 0; i<=this->order; i++)
     {
-        adj[i] = new int[order+1];
+        adj[i] = new Weight[order+1];
     }
     for(int i = 0; i<= this->order; i++)
     {
@@ -89,8 +89,8 @@ Weight ** Graph::getAdj()
     return this->adj;
 }
 
-int Graph::getSize()
+int Graph::getOrder()
 {
-    return this->size;
+    return this->order;
 }
 #endif

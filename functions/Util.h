@@ -1,9 +1,10 @@
 #ifndef UTIL_H
 #define UTIL_H
 
+using namespace std;
 
 template<typename T>
-bool isInList(T elem, vector<T> list);
+bool isInList(T elem, vector<T> list)
 {
     bool inList;
     inList = false;

@@ -17,13 +17,17 @@ class Path
         vector<int> getPath();
         void setTotalWeight(int totalweight);
         void setPath(vector<int>);
-        void addPath(int vertex);
+        void addToPath(int vertex);
         void addWeight(int weight);
         void print();
+        int getSize();
 };
 
 
-Path::Path(){}
+Path::Path()
+{
+    this->totalweight = 0;
+}
 
 
 Path::Path(int totalweight, vector<int> path)
@@ -58,7 +62,7 @@ void Path::addWeight(int weight)
     totalweight+=weight;
 }
 
-void Path::addPath(int vertex)
+void Path::addToPath(int vertex)
 {
     path.push_back(vertex);
 }
@@ -72,6 +76,11 @@ void Path::print()
         cout << " -> " << path[i];
     }
     cout <<endl;
+}
+
+int Path::getSize()
+{
+    return this->path.size();
 }
 
 #endif
