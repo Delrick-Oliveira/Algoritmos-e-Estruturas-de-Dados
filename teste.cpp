@@ -1,9 +1,10 @@
 #include <iostream>
 #include <vector>
 #include <fstream>
+#include "classes/Graph.h"
+#include "classes/Path.h"
+//#include "functions/TSPGreed.h"
 
-#include "classes/No.h"
-#include "classes/Item.h"
 
 using namespace std;
 
@@ -18,3 +19,4 @@ int main(int argc, const char * argv[])
     item2.show();
 }
 
+    
